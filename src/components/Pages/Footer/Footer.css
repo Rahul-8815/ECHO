@@ -1,0 +1,185 @@
+.footer-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #084298, #052c65, #0a58ca);
+  color: white;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  padding: 80px 20px;
+}
+
+/* Floating shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  z-index: 0;
+}
+.shape1 {
+  width: 400px;
+  height: 400px;
+  background: #1e90ff;
+  top: -60px;
+  left: -60px;
+}
+.shape2 {
+  width: 500px;
+  height: 500px;
+  background: #00bfff;
+  bottom: -80px;
+  right: -100px;
+}
+
+/* Footer content container */
+.footer-content {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+.footer-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #eaf3ff;
+  margin-bottom: 3rem;
+  letter-spacing: 1px;
+}
+
+/* Three equal cards row */
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-items: center;
+  align-items: stretch;
+  margin-bottom: 3rem;
+}
+
+.footer-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Contact section below */
+.footer-contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.footer-contact-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 2rem 3rem;
+  text-align: center;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Titles */
+.footer-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #d4e7ff;
+  margin-bottom: 1rem;
+}
+
+/* Text and lists */
+.footer-text,
+.footer-quote,
+.footer-list li {
+  color: #f0f7ff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+.footer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Quotes */
+.footer-quote {
+  margin: 0.5rem 0;
+  font-style: italic;
+}
+
+/* Social icons */
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+  margin-top: 1.2rem;
+}
+.footer-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #dbeaff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+.footer-icon:hover {
+  color: #00bfff;
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #d8e8ff;
+  opacity: 0.9;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .footer-heading {
+    font-size: 1.7rem;
+  }
+  .footer-card,
+  .footer-contact-card {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-heading {
+    font-size: 1.4rem;
+  }
+  .footer-card {
+    padding: 1.3rem;
+  }
+  .footer-contact-card {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,158 @@
+.success-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #084298, #052c65, #0a58ca);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Floating shapes */
+.shape {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+}
+.shape1 {
+  width: 400px;
+  height: 400px;
+  background: #1e90ff;
+  top: -60px;
+  left: -70px;
+}
+.shape2 {
+  width: 500px;
+  height: 500px;
+  background: #00bfff;
+  bottom: -100px;
+  right: -100px;
+}
+
+/* Glassmorphic success box */
+.success-box {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(25px);
+  border-radius: 25px;
+  padding: 60px 70px;
+  box-shadow: 0 4px 50px rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  z-index: 5;
+  max-width: 600px;
+  width: 95%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Success icon */
+.success-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.checkmark {
+  width: 80px;
+  height: 80px;
+  color: #00ffae;
+  filter: drop-shadow(0 0 20px rgba(0, 255, 170, 0.6));
+}
+
+/* Title and text */
+.success-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e0eaff;
+  margin-bottom: 20px;
+}
+.success-message {
+  font-size: 1.1rem;
+  color: #cce5ff;
+  margin-bottom: 35px;
+  line-height: 1.6;
+}
+
+/* Action buttons */
+.success-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.home-btn,
+.dashboard-btn {
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 600;
+  transition: 0.3s;
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.3);
+}
+.home-btn {
+  background: linear-gradient(90deg, #00bfff, #1e90ff);
+}
+.dashboard-btn {
+  background: linear-gradient(90deg, #00ffaa, #00c896);
+}
+.home-btn:hover,
+.dashboard-btn:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.5);
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .success-box {
+    padding: 40px 30px;
+    border-radius: 20px;
+  }
+  .checkmark {
+    width: 65px;
+    height: 65px;
+  }
+  .success-title {
+    font-size: 1.6rem;
+  }
+  .success-message {
+    font-size: 1rem;
+  }
+  .home-btn,
+  .dashboard-btn {
+    padding: 10px 22px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 480px) {
+  .success-box {
+    padding: 30px 20px;
+  }
+  .success-title {
+    font-size: 1.4rem;
+  }
+  .success-message {
+    font-size: 0.95rem;
+  }
+  .home-btn,
+  .dashboard-btn {
+    width: 100%;
+    padding: 12px;
+  }
+}
